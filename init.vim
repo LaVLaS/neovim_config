@@ -8,9 +8,13 @@
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use vim-plug plugin manger - https://github.com/junegunn/vim-plug
+" VIM-PLUG INSTALLATION
+" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-syntastic/syntastic'
 " Initialize plugin system
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,3 +120,9 @@ nmap <c-l> <c-w>l
 " Open splits on the right/bottom by default
 set splitright
 set splitbelow
+
+"vim-syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
