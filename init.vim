@@ -122,7 +122,12 @@ set splitright
 set splitbelow
 
 "vim-syntastic
+" Always stick any detected errors into the location list
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" Automatically open and/or close the location list
+"let g:syntastic_auto_loc_list = 1
+" Check for error when buffers are loaded
 let g:syntastic_check_on_open = 1
+" Disable check for error when buffers are written to disk
 let g:syntastic_check_on_wq = 0
+map <F6> :Errors<CR>
