@@ -4,6 +4,19 @@
 "     for Unix:     $HOME/.config/nvim/init.vim
 "     for Windows:  %LOCALAPPDATA%\nvim\init.vim
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use vim-plug plugin manger - https://github.com/junegunn/vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'bling/vim-airline'
+Plug 'airblade/vim-gitgutter'
+" Initialize plugin system
+call plug#end()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" END PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set backup             " keep a backup file (restore to previous version)
 set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
